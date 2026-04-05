@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Wira - イラストレーター ポートフォリオ">
+  <meta name="robots" content="noindex">
+  <title>Wira | Illustrator Portfolio</title>
+  <link rel="stylesheet" href="index.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-brand">Wira</div>
+    <ul class="nav-links">
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#achievements">Achievements</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="nav-toggle" aria-label="メニュー">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero" id="home">
+    <!-- Background Slideshow - config.js で設定した画像が自動で表示されます -->
+    <div class="hero-slideshow" id="heroSlideshow">
+      <!-- 画像がない場合のデフォルト背景 -->
+      <div class="slide active slide-default"></div>
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content fade-in">
+      <h1 class="hero-title">Wira</h1>
+      <p class="hero-subtitle">Illustrator / Artist</p>
+      <p class="hero-description"></p>
+    </div>
+  </header>
+
+  <!-- Gallery Section -->
+  <section class="section gallery-section" id="gallery">
+    <div class="container">
+      <h2 class="section-title fade-in">Gallery</h2>
+
+      <!-- Category Filter -->
+      <div class="gallery-filter fade-in">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="starrail">崩壊スターレイル</button>
+        <button class="filter-btn" data-filter="other">Other</button>
+      </div>
+
+      <!-- Gallery Grid - config.js で設定した画像が自動で表示されます -->
+      <div class="gallery-grid" id="galleryGrid">
+        <!-- 画像がない場合のプレースホルダー -->
+        <div class="gallery-placeholder-message">
+          config.js にギャラリー画像を設定してください
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Achievements Section -->
+  <section class="section achievements-section" id="achievements">
+    <div class="container">
+      <h2 class="section-title fade-in">Achievements</h2>
+
+      <div class="achievements-grid">
+        <!-- 制作実績 -->
+        <div class="achievement-card fade-in" data-accent="palette">
+          <div class="achievement-card-glow"></div>
+          <div class="achievement-icon-wrap">
+            <svg class="achievement-svg" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="32" cy="32" r="30" stroke="url(#grad-palette)" stroke-width="1.5" fill="none" opacity="0.3" />
+              <path
+                d="M32 12C22 12 14 20 14 30c0 6 3 11 8 14v6a2 2 0 002 2h16a2 2 0 002-2v-6c5-3 8-8 8-14 0-10-8-18-18-18z"
+                fill="url(#grad-palette)" opacity="0.15" />
+              <path
+                d="M44 28a2 2 0 11-4 0 2 2 0 014 0zM36 22a2 2 0 11-4 0 2 2 0 014 0zM28 28a2 2 0 11-4 0 2 2 0 014 0zM36 34a2 2 0 11-4 0 2 2 0 014 0z"
+                fill="url(#grad-palette)" />
+              <path d="M20 38c0-8 5.4-14.5 12-14.5S44 30 44 38" stroke="url(#grad-palette)" stroke-width="2"
+                stroke-linecap="round" fill="none" />
+              <defs>
+                <linearGradient id="grad-palette" x1="0" y1="0" x2="64" y2="64">
+                  <stop offset="0%" stop-color="#c084fc" />
+                  <stop offset="100%" stop-color="#818cf8" />
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+          <h3>制作実績</h3>
+          <ul class="achievement-list">
+            <li>U-22プログラミングコンテストキービジュアル</li>
+            <li>コミックマーケット107 100部販売</li>
+            <!-- 追加はこちらに -->
+          </ul>
+        </div>
+
+        <!-- 受賞歴 -->
+        <div class="achievement-card fade-in" data-accent="trophy">
+          <div class="achievement-card-glow"></div>
+          <div class="achievement-icon-wrap">
+            <svg class="achievement-svg" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="32" cy="32" r="30" stroke="url(#grad-trophy)" stroke-width="1.5" fill="none" opacity="0.3" />
+              <path d="M22 16h20v8c0 6-4 11-10 12-6-1-10-6-10-12v-8z" fill="url(#grad-trophy)" opacity="0.15"
+                stroke="url(#grad-trophy)" stroke-width="1.5" />
+              <path d="M22 20h-4c-2 0-3 1-3 3v2c0 4 3 7 7 7" stroke="url(#grad-trophy)" stroke-width="1.5"
+                stroke-linecap="round" fill="none" />
+              <path d="M42 20h4c2 0 3 1 3 3v2c0 4-3 7-7 7" stroke="url(#grad-trophy)" stroke-width="1.5"
+                stroke-linecap="round" fill="none" />
+              <rect x="28" y="36" width="8" height="6" rx="1" fill="url(#grad-trophy)" opacity="0.3" />
+              <rect x="24" y="42" width="16" height="4" rx="2" fill="url(#grad-trophy)" opacity="0.5" />
+              <path d="M29 24l3-2 3 2 1-3 3 1-1-4h-12l-1 4 3-1 1 3z" fill="url(#grad-trophy)" opacity="0.6" />
+              <defs>
+                <linearGradient id="grad-trophy" x1="0" y1="0" x2="64" y2="64">
+                  <stop offset="0%" stop-color="#fbbf24" />
+                  <stop offset="100%" stop-color="#f59e0b" />
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+          <h3>受賞歴</h3>
+          <ul class="achievement-list">
+            <li>第四回U-22キービジュアルコンテスト優秀賞</li>
+            <li>人工知能学会SIAIアワード</li>
+            <!-- 追加はこちらに -->
+          </ul>
+        </div>
+
+        <!-- 学術・研究（一時的に非表示）
+        <div class="achievement-card fade-in" data-accent="academic">
+          <div class="achievement-card-glow"></div>
+          <div class="achievement-icon-wrap">
+            <svg class="achievement-svg" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="32" cy="32" r="30" stroke="url(#grad-academic)" stroke-width="1.5" fill="none"
+                opacity="0.3" />
+              <path d="M12 28l20-10 20 10-20 10-20-10z" fill="url(#grad-academic)" opacity="0.15"
+                stroke="url(#grad-academic)" stroke-width="1.5" />
+              <path d="M20 33v10c0 2 5 5 12 5s12-3 12-5V33" stroke="url(#grad-academic)" stroke-width="1.5"
+                fill="none" />
+              <line x1="48" y1="28" x2="48" y2="46" stroke="url(#grad-academic)" stroke-width="1.5" />
+              <circle cx="48" cy="47" r="2" fill="url(#grad-academic)" opacity="0.5" />
+              <defs>
+                <linearGradient id="grad-academic" x1="0" y1="0" x2="64" y2="64">
+                  <stop offset="0%" stop-color="#34d399" />
+                  <stop offset="100%" stop-color="#06b6d4" />
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+          <h3>学術・研究</h3>
+          <ul class="achievement-list">
+            <li>関西学院大学院 理工学研究科</li>
+            <li>携帯通信端末を利用した空中手描きによる非接触型デジタル描画システム</li>
+            <li>Control of Multiple Home Electrical Appliances Using Voice and Gestures</li>
+          </ul>
+        </div>
+        -->
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="section about-section" id="about">
+    <div class="container">
+      <h2 class="section-title fade-in">About</h2>
+
+      <div class="about-content fade-in">
+        <div class="about-image">
+          <img src="images/profile/Wira.jpg" alt="Wira プロフィール画像">
+        </div>
+        <div class="about-text">
+          <h3>Wira</h3>
+          <p class="about-role">Illustrator / Artist</p>
+          <p class="about-description">
+            はじめまして、Wiraと申します。<br><br>
+            <br>
+            好きなこと、得意なジャンル、制作への想いなど。<br><br>
+            お仕事のご依頼やご質問は、SNSのDMまでお気軽にどうぞ。
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="section contact-section" id="contact">
+    <div class="container">
+      <h2 class="section-title fade-in">Contact & SNS</h2>
+
+      <div class="social-links fade-in">
+        <a href="https://x.com/wira_ekaki" target="_blank" rel="noopener noreferrer" class="social-link">
+          <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+          </svg>
+          <span>X (Twitter)</span>
+        </a>
+
+        <a href="https://www.pixiv.net/users/76563173" target="_blank" rel="noopener noreferrer" class="social-link">
+          <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M4.935 0A4.924 4.924 0 0 0 0 4.935v14.13A4.924 4.924 0 0 0 4.935 24h14.13A4.924 4.924 0 0 0 24 19.065V4.935A4.924 4.924 0 0 0 19.065 0zm7.81 4.547c2.181 0 4.058.676 5.399 1.847a6.118 6.118 0 0 1 2.116 4.66c.005 1.854-.88 3.476-2.257 4.563-1.375 1.092-3.225 1.697-5.258 1.697-2.314 0-4.46-.842-4.46-.842v2.718c.397.116 1.048.365.635.635H5.168c-.413-.27.238-.519.635-.635V6.085c-.397-.116-1.048-.365-.635-.635h4.566c.413.27-.238.519-.635.635v.973s1.27-.511 3.646-.511zm-.159 1.544c-.7 0-1.41.096-2.012.253v7.908c.414.147 1.316.381 2.012.381a4.2 4.2 0 0 0 3.055-1.261c.793-.818 1.211-1.97 1.211-3.222-.004-2.935-1.866-4.059-4.266-4.059z" />
+          </svg>
+          <span>Pixiv</span>
+        </a>
+
+        <a href="https://www.youtube.com/@wira_ekaki" target="_blank" rel="noopener noreferrer" class="social-link">
+          <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+          </svg>
+          <span>YouTube</span>
+        </a>
+      </div>
+
+      <p class="contact-note fade-in">
+        お仕事のご依頼・ご相談はSNSのDMにてお願いします
+      </p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2026 Wira. All rights reserved.</p>
+  </footer>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" aria-label="閉じる">&times;</button>
+    <button class="lightbox-prev" aria-label="前へ">&#10094;</button>
+    <button class="lightbox-next" aria-label="次へ">&#10095;</button>
+    <div class="lightbox-content">
+      <img src="" alt="" class="lightbox-image">
+      <p class="lightbox-caption"></p>
+    </div>
+  </div>
+
+  <script src="config.js"></script>
+  <script src="main.js"></script>
+</body>
+
+</html>
