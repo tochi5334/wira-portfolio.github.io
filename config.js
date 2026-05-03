@@ -47,6 +47,5 @@ const galleryOther = [
     '城ヶ崎ノア.jpg',
     '黒部ナノカ.jpg',
     'ヤチヨ.jpg',
-    'test me.jpg',
     'U-22プロコン_キービジュアル.jpg',
 ];
